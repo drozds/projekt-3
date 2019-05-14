@@ -46,7 +46,7 @@ int Calc::performOperation(const string& input, stack<double>& calcStack) {
             break;
         case '/':
             if (secondOperand == 0)
-            { // moved this test to here because it's the only place it matters.
+            {
                 cout << "Error: Division by 0.\n";
                 return -1;
             }

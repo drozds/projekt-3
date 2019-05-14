@@ -119,8 +119,8 @@ void Test::testStack() {
 
 void Test::testCalc() {
     Calc calc;
-    cout << "RPN Calculator: " << endl;
-    cout << "Input\n";
+    cout << "Calculator test(decimal): " << endl;
+    cout << "Input\n" << endl;
 
     stack<double> calcStack;
     string input;
@@ -173,4 +173,26 @@ void Test::testCalc() {
             }
         }
     }
+    // cout << "Do you want to test calculator in hex, oct or bin?\n" << endl;
+    // cout << "1.Bin\t\t2.Oct\t\t3.Hex\t\t4.Exit" <<endl;
+    // int flag;
+    // cin >> flag;
+    // switch (flag)
+    // {
+    // case 1:
+    //     /* code */
+    //     break;
+    // case 2:
+    //     /* code */
+    //     break;
+    // case 3:
+    //     /* code */
+    //     break;
+    // case 4:
+        
+    //     break;   
+    
+    // default:
+    //     break;
+    // }
 }

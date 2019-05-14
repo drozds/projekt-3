@@ -132,7 +132,7 @@ class Liczba {
 //Szesnastkowy
     int hexBin(string value) {
         int result = 0;
-        for (int i=0; i < value.length(); i++) {
+        for (long long unsigned int i=0; i < value.length(); i++) {
             if (value[i]>=48 && value[i]<=57)
             {
                 result += (value[i]-48)*pow(16,value.length()-i-1);
@@ -146,7 +146,7 @@ class Liczba {
     }
     int hexOct(string value) {
         int result = 0;
-        for (int i=0; i < value.length(); i++) {
+        for (long long unsigned int i=0; i < value.length(); i++) {
             if (value[i]>=48 && value[i]<=57)
             {
                 result += (value[i]-48)*pow(16,value.length()-i-1);
@@ -160,7 +160,7 @@ class Liczba {
     }
     int hexDec(string value) {
         int result = 0;
-        for (int i=0; i < value.length(); i++) {
+        for (long long unsigned int i=0; i < value.length(); i++) {
             if (value[i]>=48 && value[i]<=57)
             {
                 result += (value[i]-48)*pow(16,value.length()-i-1);
