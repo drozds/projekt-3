@@ -44,7 +44,7 @@ class Liczba {
     }
 //Dwojkowy
     int binDec(int value) {
-        int decimalNum = 0, binaryNum = 0, count = 0;
+        int decimalNum = 0, count = 0;
         while(value != 0) {
             decimalNum += (value % 10) * pow(2,count);
             ++count;
@@ -103,7 +103,7 @@ class Liczba {
         return binaryNum;
     }
     int octDec(int value) {
-        int decimalNum = 0, binaryNum = 0, count = 0;
+        int decimalNum = 0, count = 0;
         while(value != 0) {
             decimalNum += (value % 10) * pow(8,count);
             ++count;
@@ -131,7 +131,7 @@ class Liczba {
     }
 //Szesnastkowy
     int hexBin(string value) {
-        unsigned long result = 0;
+        int result = 0;
         for (int i=0; i < value.length(); i++) {
             if (value[i]>=48 && value[i]<=57)
             {
@@ -145,7 +145,7 @@ class Liczba {
         return decBin(result);
     }
     int hexOct(string value) {
-        unsigned long result = 0;
+        int result = 0;
         for (int i=0; i < value.length(); i++) {
             if (value[i]>=48 && value[i]<=57)
             {
@@ -159,7 +159,7 @@ class Liczba {
         return decOct(result);
     }
     int hexDec(string value) {
-        unsigned long result = 0;
+        int result = 0;
         for (int i=0; i < value.length(); i++) {
             if (value[i]>=48 && value[i]<=57)
             {
