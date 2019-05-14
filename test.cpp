@@ -12,18 +12,18 @@ using namespace std;
 void Test::testLiczba() {
 //DECIMAL
     Dec *liczbaDec = new Dec();
-    cout << "Tests of convertations numbers(in decimal) 17, 135, 1034 to hex, bin and oct" << endl;
+    cout << "Tests of convertations numbers(in decimal) 17, 135, 879 to hex, bin and oct" << endl;
     cout << "CONVERT TO BIN: " << endl;
-    cout << "Here expected \"10001\", \"10000111\", \"1101101111\": " 
-    << liczbaDec->decBin(17)<<", " << liczbaDec->decBin(135) <<", "<< liczbaDec->decBin(879) <<endl;
-    
+    cout << "Here expected \"10001\", \"10000111\", \"1101101111\": "<< liczbaDec->decBin(17)<<", " << liczbaDec->decBin(135) <<", "<< liczbaDec->decBin(879) <<endl;
+
     cout << "CONVERT TO OCT: " << endl;
-    cout << "Here expected \"21\", \"207\", \"1557\": " 
-    << liczbaDec->decOct(17)<<", " << liczbaDec->decOct(135) <<", "<< liczbaDec->decOct(879) <<endl;
+    cout << "Here expected \"21\", \"207\", \"1557\": "<< liczbaDec->decOct(17)<<", " << liczbaDec->decOct(135) <<", "<< liczbaDec->decOct(879) <<endl;
 
     cout << "CONVERT TO HEX: " << endl;
-    cout << "Here expected \"11\", \"87\", \"36F\": " 
-    << liczbaDec->decHex(17)<<", " << liczbaDec->decHex(135) <<", "<< liczbaDec->decHex(879) <<endl;
+    cout << "Here expected \"11\", \"87\", \"36F\": ";
+    cout<< liczbaDec->decHex(17) <<", ";
+    cout<< liczbaDec->decHex(135) <<", ";
+    cout<< liczbaDec->decHex(879) <<endl;
     delete liczbaDec;
 
 //BINARY
@@ -31,16 +31,18 @@ void Test::testLiczba() {
     Bin *liczbaBin = new Bin();
     cout << "Tests of convertations numbers(in binary) 11011, 11011011, 111110010 to hex, dec and oct" << endl;
     cout << "CONVERT TO DEC: " << endl;
-    cout << "Here expected \"27\", \"219\", \"498\": " 
+    cout << "Here expected \"27\", \"219\", \"498\": "
     << liczbaBin->binDec(11011)<<", " << liczbaBin->binDec(11011011) <<", "<< liczbaBin->binDec(111110010) <<endl;
-    
+
     cout << "CONVERT TO OCT: " << endl;
-    cout << "Here expected \"33\", \"333\", \"762\": " 
+    cout << "Here expected \"33\", \"333\", \"762\": "
     << liczbaBin->binOct(11011)<<", " << liczbaBin->binOct(11011011) <<", "<< liczbaBin->binOct(111110010) <<endl;
 
     cout << "CONVERT TO HEX: " << endl;
-    cout << "Here expected \"1B\", \"DB\", \"1F2\": " 
-    << liczbaBin->binHex(11011)<<", " << liczbaBin->binHex(11011011) <<", "<< liczbaBin->binHex(111110010) <<endl;
+    cout << "Here expected \"1B\", \"DB\", \"1F2\": ";
+    cout<< liczbaBin->binHex(11011)<<", ";
+    cout << liczbaBin->binHex(11011011) <<", ";
+    cout<< liczbaBin->binHex(111110010) <<endl;
     delete liczbaBin;
 
 //OCTAL
@@ -48,16 +50,18 @@ void Test::testLiczba() {
     Oct *liczbaOct = new Oct();
     cout << "Tests of convertations numbers(in octal) 30, 67, 102 to hex, dec and bin" << endl;
     cout << "CONVERT TO DEC: " << endl;
-    cout << "Here expected \"24\", \"55\", \"66\": " 
+    cout << "Here expected \"24\", \"55\", \"66\": "
     << liczbaOct->octDec(30)<<", " << liczbaOct->octDec(67) <<", "<< liczbaOct->octDec(102) <<endl;
-    
+
     cout << "CONVERT TO BIN: " << endl;
-    cout << "Here expected \"11000\", \"110111\", \"1000010\": " 
+    cout << "Here expected \"11000\", \"110111\", \"1000010\": "
     << liczbaOct->octBin(30)<<", " << liczbaOct->octBin(67) <<", "<< liczbaOct->octBin(102) <<endl;
 
     cout << "CONVERT TO HEX: " << endl;
-    cout << "Here expected \"18\", \"37\", \"42\": " 
-    << liczbaOct->octHex(30)<<", " << liczbaOct->octHex(67) <<", "<< liczbaOct->octHex(102) <<endl;
+    cout << "Here expected \"18\", \"37\", \"42\": ";
+    cout<< liczbaOct->octHex(30)<<", ";
+    cout << liczbaOct->octHex(67) <<", ";
+    cout<< liczbaOct->octHex(102) <<endl;
     delete liczbaOct;
 
 //HEXADECIMAL
@@ -65,15 +69,15 @@ void Test::testLiczba() {
     Hex *liczbaHex = new Hex();
     cout << "Tests of convertations numbers(in hexidecimal) 1D, 280, 3AF to oct, dec and bin" << endl;
     cout << "CONVERT TO DEC: " << endl;
-    cout << "Here expected \"29\", \"640\", \"943\": " 
+    cout << "Here expected \"29\", \"640\", \"943\": "
     << liczbaHex->hexDec("1D")<<", " << liczbaHex->hexDec("280") <<", "<< liczbaHex->hexDec("3AF") <<endl;
-    
+
     cout << "CONVERT TO BIN: " << endl;
-    cout << "Here expected \"11101\", \"1010000000\", \"1110101111\": " 
+    cout << "Here expected \"11101\", \"1010000000\", \"1110101111\": "
     << liczbaHex->hexBin("1D")<<", " << liczbaHex->hexBin("280") <<", "<< liczbaHex->hexBin("3AF") <<endl;
 
     cout << "CONVERT TO OCT: " << endl;
-    cout << "Here expected \"35\", \"1200\", \"1657\": " 
+    cout << "Here expected \"35\", \"1200\", \"1657\": "
     << liczbaHex->hexOct("1D")<<", " << liczbaHex->hexOct("280") <<", "<< liczbaHex->hexOct("3AF") <<endl;
     delete liczbaHex;
 }
@@ -88,33 +92,33 @@ void Test::testStack() {
     cout << "\n---------------------------\nEnter 5 chars: " << endl;
     int ct = 0;
     char ch;
- 
+
     while (ct++ < 5)
     {
         cin >> ch;
         stackSymbol.push(ch); // помещаем элементы в стек
     }
- 
+
     cout << endl;
     cout << "You have pushed 5 elements" << endl;
     stackSymbol.printStack(); // печать стека
- 
+
     cout << "\n\nLet's delete element from stack\n";
     stackSymbol.pop();
- 
+
     stackSymbol.printStack(); // печать стека
- 
+
     Stack<char> newStack(stackSymbol);
- 
+
     cout << "\n\nCopy constructor have worked\n";
     newStack.printStack();
- 
+
     cout << "Second element in stack is: "<< newStack.Peek(2) << endl;
 
 }
-    
+
 //
-//TEST KALKULATORA 
+//TEST KALKULATORA
 //
 
 void Test::testCalc() {
@@ -143,7 +147,7 @@ void Test::testCalc() {
         else
         {
             cout << "Result: " << calcStack.top();
-            calcStack.pop(); 
+            calcStack.pop();
         }
     }
 
@@ -166,7 +170,7 @@ void Test::testCalc() {
             else if(calc.isOperator(input))
             {
                 calc.performOperation(input, calcStack);
-            }   
+            }
             else if(input == "0\n")
             {
                 // return -1;
@@ -189,9 +193,9 @@ void Test::testCalc() {
     //     /* code */
     //     break;
     // case 4:
-        
-    //     break;   
-    
+
+    //     break;
+
     // default:
     //     break;
     // }

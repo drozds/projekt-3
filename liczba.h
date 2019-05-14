@@ -8,7 +8,7 @@ class Liczba {
     public:
 //Dziesietny
     int decBin(int value) {
-        int binaryNum, count = 1;
+        int binaryNum = 0, count = 1;
         while (value != 0) {
             binaryNum += (value % 2) * count;
             value/= 2;
@@ -17,7 +17,7 @@ class Liczba {
         return binaryNum;
     }
     int decOct(int value) {
-        int binaryNum, count = 1;
+        int binaryNum = 0, count = 1;
         while (value != 0) {
             binaryNum += (value % 8) * count;
             value/= 8;
@@ -54,10 +54,10 @@ class Liczba {
     }
     int binOct(int value) {
         int octalNum = 0, decimalNum = 0, count = 0;
-   
+
         while(value != 0) {
             decimalNum += ( value % 10) * pow(2,count);
-            ++count; 
+            ++count;
             value /= 10;
         }
         count = 1;
@@ -127,7 +127,7 @@ class Liczba {
         }
         for (j = i; j > 0; j--)
             cout << hex[j];
-        return "";
+        return " ";
     }
 //Szesnastkowy
     int hexBin(string value) {
@@ -179,24 +179,24 @@ class Dec : public Liczba {
     public:
     Dec();
     int dec;
-}; 
+};
 
 class Oct : public Liczba {
     public:
     Oct();
     int oct;
-}; 
+};
 
 class Bin : public Liczba {
     public:
     Bin();
     int bin;
-}; 
+};
 
 class Hex : public Liczba {
     public:
     Hex();
     string hex;
-}; 
+};
 
 #endif
